@@ -1,0 +1,198 @@
+/* -----------------------------------------------------------------------
+
+   Slim CSS Framework v1.5
+   http://billyshall.com/slimcss/
+
+----------------------------------------------------------------------- */
+
+/* Reset ------------------------------------------------------------ */
+
+html,body,div,h1,h2,h3,h4,h5,h6,p,blockquote,code,pre,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,input { margin: 0; padding: 0; }
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th,p,input,select,textarea { font-size: 1em; font-weight: normal; font-style:normal; }
+table { border-collapse: collapse; border-spacing: 0; }
+caption,th { text-align: left; }
+ul,ol { list-style: none; }
+fieldset,img { border: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; }
+
+/* Layout ------------------------------------------------------------ */
+
+html { margin-bottom:1px; min-height:100%; }
+html, body { height: 100%; }
+body { background-color: #fff; color: #333;	font: 12px/18px "Lucida Grande", Geneva, Arial, Verdana, sans-serif; }
+
+.wrapper { position: relative; text-align: left; width: 960px; margin: 0 auto; }
+
+body.fluid .wrapper { min-width: 780px; max-width: 1260px; margin: 0 20px; width: auto; width:expression(document.body.clientWidth < 782? "780px" : document.body.clientWidth > 1262? "1260px" : "auto"); }	
+	
+.header, .footer { width: 100%; margin: 0 auto; position: relative; }
+
+/* Grid ------------------------------------------------------------ */
+
+.onecol, .twocol, .twocollefta, .twocolleftb, .twocolrighta, .twocolrightb, .threecol, .threecola, .fourcol, .fivecol, .sixcol { width: 100%; margin:0 auto 18px auto; display:inline-block; position:relative; }
+
+.column { float: left; margin-left: 2%; }	
+.column.first, .column.last { margin-left: 0 !important; }
+.column.last { float: right; }
+
+.column.first .column :last-child { margin-bottom: 0; }
+.column.last .column :last-child { margin-bottom: 0; }
+
+/* One Column ----------------------------- */
+.onecol { }
+.onecol .column,
+.column .onecol .column,
+.column .onecol .column.first,
+.column .onecol .column.last { width:90% !important; float:none; margin:0 auto; } 
+
+/* Two Column ----------------------------- */
+/* Even */
+.twocol .column { width: 49%; }
+.column .twocol .column, .column .twocol .column.first, .column .twocol .column.last { width: 48%; }
+
+/* Smaller Left - Wider Right */
+.twocollefta .column.first, .column .twocollefta .column.first { width: 20%; }
+.twocollefta .column.last, .column .twocollefta .column.last  { width: 78%; }
+
+/* Small Left - Wide Right */
+.twocolleftb .column.first, .column .twocolleftb .column.first { width: 33%; }
+.twocolleftb .column.last, .column .twocolleftb .column.last { width: 65%; }
+
+/* Wider Left - Small Right */
+.twocolrighta .column.first, .column .twocolrighta .column.first { width: 74%; }
+.twocolrighta .column.last, .column .twocolrighta .column.last  { width: 24%; }
+
+/* Small Left - Wide Right - fit nested .twocol for a total of 3 columns */
+.twocolrightb .column.first, .column .twocolrightb .column.first { width: 65%; }
+.twocolrightb .column.last, .column .twocolrightb .column.last { width: 33%; }
+
+
+/* Three Column ----------------------------- */
+
+
+
+/* Small Right/Left - Wide Center */
+.threecola .column, .column .threecola .column, .column.first .threecola .column, .column.last .threecola .column { width: 55.5%; }
+.threecola .column.first, .threecola .column.last, .column .threecola .column.first, .column .threecola .column.last { width: 20%; }
+
+/* Even */
+.threecol .column, .column .threecol .column, .column.first .threecol .column, .column.last .threecol .column { width: 32%; margin-right: 0; }
+
+/* Four Column */
+.fourcol .column, .column .fourcol .column, .column.first fourcol .column, .column.last .fourcol .column { width: 23%; margin-left: 3%; }
+
+/* Five Column */
+.fivecol .column, .column .fivecol .column, .column.first .fivecol .column, .column.last .fivecol .column { width: 18.5%; }
+
+/* Six Column */
+.sixcol .column, .column .sixcol .column, .column.first .sixcol .column, .column.last .sixcol .column { width: 15.1%; }
+
+/* Clear Floats */
+.column:after, .onecol:after, .twocol:after, .twocollefta:after, .twocolleftb:after, .twocolrighta:after, .twocolrightb:after, .threecol:after, .threecola:after, .fourcol:after, .fivecol:after, .sixcol:after, .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+/* Typography ------------------------------------------------------------ */
+
+a { color: #105CB6; text-decoration: none; }
+a:hover, a:focus { color: #105CB6; text-decoration: underline; }
+a:active { color: #105CB6; }
+
+h1 { font-size: 24px; line-height: 36px; margin-bottom: 18px; }
+h2 { font-size: 18px; line-height: 18px; margin-bottom: 18px; } 
+h3 { font-size: 12px; line-height: 18px; font-weight: bold; }
+h4 { font-size: 12px; line-height: 18px; font-weight: bold; }
+h5 { font-size: 11px; line-height: 18px; font-weight: bold; }
+h6 { font-size: 10px; line-height: 18px; font-weight: bold; }
+h1,h2,h3,h4,h5,h6 { color: #333; } 
+
+p { margin-bottom: 18px; }
+.textleft 	 { text-align: left; } 
+.textcenter  { text-align: center; } 
+.textright   { text-align: right; } 
+.textjustify { text-align: justify; }
+
+img.left   { float: left; margin: 0 18px 18px 0; }
+img.center { margin: 0 auto; display: block; }
+img.right  { float: right; margin: 0 0 18px 18px; }
+a.left  { float: left; }
+a.right { float: right; }
+
+.serif { font-family: Georgia, "lucida bright", "times new roman", serif; }
+		
+/* Misc ------------------------------------------------------------ */
+
+em, i { font-style: italic; }
+strong, b { font-weight: bold; }
+.hr { background-color: #ccc; border: 0px; color: #ccc; height: 1px; margin: 8px 0 18px 0; }
+pre, code { background:#E0ECF6; display:block; margin-bottom: 18px; padding:10px; }
+abbr, acronym { border-bottom: 1px dotted #666; cursor: help; }
+address { margin-bottom: 18px; font-style: italic; }
+del { color: #666; }
+dfn { font-weight: bold; }
+
+blockquote { margin: 10px 10px 18px; padding: 9px; background-color: #f8f8f8; color: #666; border-left: 5px solid #ddd; font: 14px/18px Georgia, Times, serif; quotes: "\201C" "\201D"; }
+blockquote p { margin: 0; }	
+blockquote:before { content: open-quote; font-weight: bold; }
+blockquote:after  { content: close-quote; font-weight: bold; }
+
+.clear { clear: both; }
+.zero { margin: 0; padding: 0; }
+
+/* Round Corners ------------------------------------------------------------ */
+
+.roundtop { -webkit-border-top-right-radius: 5px; -khtml-border-radius-topright: 5px; -moz-border-radius-topright: 5px; border-top-right-radius: 5px; -webkit-border-top-left-radius: 5px; -khtml-border-radius-topleft: 5px; -moz-border-radius-topleft: 5px; border-top-left-radius: 5px; }
+
+.roundbottom { -webkit-border-bottom-right-radius: 5px; -khtml-border-radius-bottomright: 5px; -moz-border-radius-bottomright: 5px; border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -khtml-border-radius-bottomleft: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-left-radius: 5px; }
+
+.round { -webkit-border-radius: 9px; -khtml-border-radius: 9px; -moz-border-radius: 9px; border-radius: 9px; }
+
+/* Lists ------------------------------------------------------------ */
+
+ul { margin-bottom: 18px; list-style: none outside; }
+ol { margin-bottom: 18px; margin-left: 2em; list-style-type: decimal; }
+
+ul.disc   { list-style: disc outside;   margin-left: 2em; }
+ul.circle { list-style: circle outside; margin-left: 2em; }
+ul.square { list-style: square outside; margin-left: 2em; }
+
+ul ul, ol ol { margin-bottom:0; }
+	
+dl { margin-bottom: 18px; }
+dt { font-weight: bold; margin-bottom: 18px; }
+dd { }
+
+/* Forms ------------------------------------------------------------ */
+
+fieldset { position: relative; border-top:1px solid #ccc; padding: 10px; margin-bottom:18px; }
+fieldset legend { font-weight:bold; font-size:16px; padding: 0 5px; }
+
+form label { }
+form .error { color: #ff0000; display: block; } 
+
+form.inline label { margin-right: 10px; text-align:right; width:140px; float:left; }
+/* form.inline input, form.inline textarea  { margin:0 0 9px 0; }	*/
+form.inline input[type="text"], form.inline input[type="password"] {  }
+form.inline input[type="submit"] { margin-left:150px; display: block; }	
+form.inline textarea { font-size: 12px; padding: 4px; border: solid 1px #ccc; }	
+form.inline .error { color: #ff0000; display: block; margin-left:150px; font-size: 11px; font-style: italic; } 
+form.inline em { display: block; margin-left:150px; font-size: 11px; font-style: italic; } 
+
+form.block label { display: block; }
+form.block input[type="text"], form.block input[type="password"] { display: block; font-size: 12px; padding: 5px; border: solid 1px #ccc; }
+form.block textarea { font-size: 12px; padding: 5px; border: solid 1px #ccc; }
+form.block input[type="submit"] { display: block; }	
+
+/* Tables ------------------------------------------------------------ */
+
+table { margin-bottom: 18px; width:100%; }
+th { font-weight: bold; }
+td { text-align: left; }
+tfoot { font-style: italic; }
+.odd  { background-color:#EDF3F9; }
+.even { background-color:#ffffff; }
+
+/* Print ------------------------------------------------------------ */
+
+@media print {
+	body, .wrapper { color: #000 !important; }
+	a, a:link, a:visited { color: #000 !important; text-decoration: none !important; }
+	}

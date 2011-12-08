@@ -1,0 +1,50 @@
+@import "slim.css";
+
+/* -----------------------------------------------------------------------
+
+   Minimal v1.0
+   http://billyshall.com/templates/minimal
+
+----------------------------------------------------------------------- */
+
+/* Header ------------------------------------------------------------ */
+
+.header { height: 54px; margin: 0 auto 18px auto; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif; }
+
+a.logo { float:left; text-align: center; font-size: 26px; background-color: #eee; color:#333; text-shadow: 1px 1px 0px #fff; padding: 9px; }
+a.logo:hover { text-decoration: none; background-color: #ddd; }	
+a.logo span { display: block; font-size: 14px; color: #666; }
+
+.nav { padding:0; margin:0; float:right; }
+.nav li { display:inline; padding-left:9px; }
+.nav li a {	background-color: #eee; font-size: 14px; color: #333; padding: 3px 14px; text-shadow: 1px 1px 0px #fff; }
+.nav li a:hover { background-color: #ddd; text-decoration:none; border-bottom: 10px solid #ddd; }
+
+.breadcrumbs { position:relative; margin-bottom:9px; color:#333; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif; font-size:11px; }
+
+.leaderboard { margin: 0 auto 18px; text-align: center; }
+
+/* Footer ------------------------------------------------------------ */
+.footer { border-top:1px solid #ccc; font-size:10px; line-height:26px; color:#999; }
+.footer a { color:#999999; }
+.footer a:hover { color:#105CB6; }
+.footer p { float:left; }
+.footer ul { float:right; }
+.footer ul li { display:inline; list-style:none; padding-left:18px; }
+
+
+h1,h2,h3 { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif; }
+	
+
+/* Side Columns ------------------------------------------------------------ */	
+
+.sidecol { }
+
+.sidecol h4 { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif; font-size: 16px; color: #333; border-bottom: 1px solid #ccc; font-weight: normal; line-height: 24px; text-indent: 10px; margin-bottom: 9px; }
+
+.sidecol ul li { margin: 0 0 3px; }
+.sidecol ul li a { border: 1px solid #ccc; display: block; text-indent: 10px; background-color: #eee; color: #333; }
+.sidecol ul li a:hover { text-decoration: none; background-color: #ddd; }
+
+/* Misc ------------------------------------------------------------ */
+
