@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <title>ProjectHomework</title>
+    <meta name="viewport" content="width=1024" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="all" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+      <div class="header">
+	<a class="logo roundbottom" href="#">ProjectHomework
+	  <span>A Contest Entry</span>
+	</a>
+	<ul class="nav">
+	  <li><a class="roundbottom" href="/">Home</a></li>
+	</ul>
+      </div>
+      
+      <div class="twocolrightb">
+	<div class="column first">
+	  <h1><% user %></h1>
+	  <ul>
+	    <% FOREACH task IN todo %>
+	    <li><b>TODO: </b><% task.first %></li>
+	    <% END %>
+	    <% FOREACH task IN done %>
+	    <li><B>DONE: </b><% task %></li>
+	    <% END %>
+	  </ul>
+	  </div>
+	  <div class="column last sidecol">
+	    <h4>Toolbar</h4>
+
+	    <% IF session.username %>
+	    <b><a href="/users/<% session.username %>"><% session.username %></a></b>
+	    <br />
+	    <form action="add" method="post">
+	      <input type="text" name="task" />&nbsp;<input type="submit" value="add" />
+	    </form>
+	    <a href="/logout">logout</a>
+	    <% ELSE %><form action="login" method="post">
+	      <table cellpadding="2px">
+		<tr>
+		  <td><b>username</b></td>
+		  <td><input type="text" name="user" /></td>
+		</tr>
+		<tr>
+		  <td><b>password</b></td>
+		  <td><input type="password" name="pass" /></td>
+		</tr>
+		<tr>
+		  <td><input type="submit" value="login" /></td>
+		</tr>
+	      </table>
+	    </form><% END %>
+	    <div class="hr"></div>
+	    <b><% message %></b>
+	  </div>
+	</div><!-- column last sidecol -->
+      </div><!-- twocolrightb -->	
+
+      
+      <div class="footer">
+	<p>
+	  &copy; 2008 <a href="#">Your Name</a> |  
+	  <!-- Not required, but appreciated. -->
+	  <a href="http://billyshall.com/templates/minimal">Minimal CSS Template</a> by Billy Shall
+	</p>
+      </div><!-- footer -->
+
+    </div><!-- wrapper -->
+  </body>
+</html>
