@@ -53,12 +53,12 @@
 	    <% IF session.username %>
 	    <b><a href="/users/<% session.username %>"><% session.username %></a></b>
 	    <br />
-	    <form action="add" method="post">
+	    <form action="/add" method="post">
 	      <input type="text" name="task" />&nbsp;<input type="submit" value="add" />
 	    </form>
 	    <a href="/logout">logout</a>
 	    <div id="hr" />
-	    <% ELSE %><form action="login" method="post">
+	    <% ELSE %><form action="/login" method="post">
 	      <table cellpadding="2px">
 		<tr>
 		  <td><b>username</b></td>

@@ -26,10 +26,10 @@
 	  <h1><% user %></h1>
 	  <ul>
 	    <% FOREACH task IN todo %>
-	    <li><b>TODO: </b><% task.first %></li>
+	    <li><b><a href="/toggle/<% task %>">TODO</a>: </b><% task %></li>
 	    <% END %>
 	    <% FOREACH task IN done %>
-	    <li><B>DONE: </b><% task %></li>
+	    <li><B><a href="/toggle/<% task %>">DONE</a>: </b><% task %></li>
 	    <% END %>
 	  </ul>
 	  </div>
@@ -39,11 +39,12 @@
 	    <% IF session.username %>
 	    <b><a href="/users/<% session.username %>"><% session.username %></a></b>
 	    <br />
-	    <form action="add" method="post">
+	    <form action="/add" method="post">
 	      <input type="text" name="task" />&nbsp;<input type="submit" value="add" />
 	    </form>
 	    <a href="/logout">logout</a>
-	    <% ELSE %><form action="login" method="post">
+	    <a href="/purge">purge</a>
+	    <% ELSE %><form action="/login" method="post">
 	      <table cellpadding="2px">
 		<tr>
 		  <td><b>username</b></td>
